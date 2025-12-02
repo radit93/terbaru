@@ -3,9 +3,9 @@ import supabase from "../lib/supabaseClient";
 import { BRAND_MAP } from "../utils/BrandMap";
 import { mapProducts } from "../data/ProductMapper";
 
-// =======================
+// ======================
 // GET PRODUCT BY BRAND
-// =======================
+// ======================
 export async function getProductsByBrandSlug(slug) {
   const brandId = BRAND_MAP[slug];
   if (!brandId) return [];
