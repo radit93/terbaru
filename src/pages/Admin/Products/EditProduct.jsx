@@ -144,7 +144,7 @@ export default function EditProduct() {
         <h1 className="text-2xl font-bold">Edit Produk</h1>
         <button
           onClick={() => navigate(-1)}
-          className="px-4 py-2 rounded-lg border text-sm hover:bg-black hover:text-white transition"
+          className="bg-black px-4 py-2 rounded-lg border text-sm hover:bg-black text-white transition"
         >
           Kembali
         </button>
@@ -162,6 +162,7 @@ export default function EditProduct() {
             name="nama"
             form={form}
             handle={handleChange}
+            className="bg-white"
           />
 
           {/* BRAND */}
@@ -172,7 +173,7 @@ export default function EditProduct() {
             <select
               value={form.brand_id}
               onChange={(e) => handleChange("brand_id", e.target.value)}
-              className="w-full bg-[#FAF7F0] border border-gray-300 rounded-xl px-4 py-3"
+              className="w-full bg-[#ffffff] border border-gray-300 rounded-xl px-4 py-3"
             >
               <option value="">Pilih Brand</option>
               {brands.map((b) => (
@@ -190,7 +191,7 @@ export default function EditProduct() {
               rows={5}
               value={form.deskripsi}
               onChange={(e) => handleChange("deskripsi", e.target.value)}
-              className="w-full bg-[#FAF7F0] border border-gray-300 rounded-xl px-4 py-3"
+              className="w-full bg-[#fffff] border border-gray-300 rounded-xl px-4 py-3"
             ></textarea>
           </div>
 
@@ -225,7 +226,7 @@ export default function EditProduct() {
               type="file"
               accept="image/*"
               onChange={(e) => handleChange("gambar1", e.target.files[0])}
-              className="w-full bg-[#FAF7F0] border border-gray-300 rounded-xl px-4 py-3"
+              className="w-full bg-[#fffff] border border-gray-300 rounded-xl px-4 py-3"
             />
           </div>
 
@@ -241,7 +242,7 @@ export default function EditProduct() {
               type="file"
               accept="image/*"
               onChange={(e) => handleChange("gambar2", e.target.files[0])}
-              className="w-full bg-[#FAF7F0] border border-gray-300 rounded-xl px-4 py-3"
+              className="w-full bg-[#fffff] border border-gray-300 rounded-xl px-4 py-3"
             />
           </div>
 
@@ -261,14 +262,14 @@ export default function EditProduct() {
 function FormInput({ label, name, type = "text", form, handle }) {
   return (
     <div>
-      <label className="block mb-1 text-sm font-medium text-gray-600">
+      <label className="block mb-1 text-sm font-medium">
         {label}
       </label>
       <input
         type={type}
         value={form[name]}
         onChange={(e) => handle(name, e.target.value)}
-        className="w-full bg-[#FAF7F0] border border-gray-300 rounded-xl px-4 py-3"
+        className="w-full bg-[#fffff] border border-gray-300 rounded-xl px-4 py-3"
       />
     </div>
   );

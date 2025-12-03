@@ -24,6 +24,8 @@ import AddProduct from "./pages/Admin/Products/AddProduct";
 import EditProduct from "./pages/Admin/Products/EditProduct";
 import EditVariant from "./pages/Admin/Products/EditVariants"
 
+import ProductDetails from "./pages/ProductDetails";
+
 import { SearchProvider } from "./context/SearchContext";
 
 export default function App() {
@@ -33,7 +35,10 @@ export default function App() {
   const hideLayout =
     location.pathname === "/login" ||
     location.pathname === "/register" ||
+    location.pathname === "/wishlist" ||
+    location.pathname === "/cart " ||
     location.pathname.startsWith("/admin");
+
 
   return (
     <SearchProvider>
@@ -48,6 +53,7 @@ export default function App() {
         <Route path="/category/:main" element={<CategoryPage />} />
         <Route path="/category/:main/:sub" element={<CategoryPage />} />
 
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
         <Route path="/wishlist" element={<ProtectedRoute><Wishlist /></ProtectedRoute>} />
         <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />

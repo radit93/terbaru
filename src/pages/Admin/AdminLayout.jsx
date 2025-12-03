@@ -100,7 +100,7 @@ export default function AdminLayout() {
       )}
 
       {/* MAIN CONTENT */}
-      <div className="flex-1 min-h-screen bg-[#FAF7F0]">
+      <div className="flex-1 min-h-screen bg-white">
         {/* HEADER */}
         <header className="w-full bg-white shadow py-4 px-6 flex items-center gap-4">
           <button onClick={() => setSidebarOpen(true)}>

@@ -98,7 +98,7 @@ export default function EditVariant() {
 
         <button
           onClick={() => navigate(-1)}
-          className="px-4 py-2 rounded-lg border hover:bg-black hover:text-white"
+          className="bg-black px-4 py-2 rounded-lg border hover:bg-black text-white"
         >
           Kembali
         </button>

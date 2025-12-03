@@ -61,7 +61,7 @@ export default function ProfileAdmin() {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Profile Admin</h1>
 
-      <div className="bg-white shadow rounded-xl p-6 max-w-md">
+      <div className="bg-gray-300 shadow rounded-xl p-6 max-w-md">
         <p className="text-gray-600 text-sm mb-1">Username</p>
         <p className="font-semibold text-lg mb-4">
           {profile.usernames || "Tidak ada username"}
